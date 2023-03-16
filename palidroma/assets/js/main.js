@@ -4,7 +4,7 @@ Chiedere all’utente di inserire una parola Creare una funzione per capire se l
 */
 
 // chiedo all'utenete di inserire la parla da verificare
-const word = prompt('Inserire la parola');
+const word = prompt('Inserire la parola').toLocaleLowerCase();
 console.log(word);
 
 // creo una funzione che mi permette di leggere al contrario la parola inserita 
