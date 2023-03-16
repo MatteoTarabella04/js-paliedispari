@@ -10,7 +10,10 @@ console.log(userChoise);
 
 // verifico che l'utente non abbia inserito un input sbagliato
 if (userChoise != 'pari' && userChoise != 'dispari') {
-   alert('OOPS!!! Qualcosa è andato storto aggiorna la pagina e prova a inserire di nuovo la tua scelta');
+   alert('OOPS!!! Qualcosa è andato storto prova a inserire di nuovo la tua scelta');
+
+   // istruzione che ricarica la pagina se si inserisce una scelta sbagliata
+   window.location.reload(true);
 
 } else {
    // ora chiedo di inserire un numero da 1 a 5
