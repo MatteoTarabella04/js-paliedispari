@@ -31,3 +31,8 @@ if (userChoise != 'pari' && userChoise != 'dispari') {
 // *****FUNZIONI*****
 
 // creo la funzione che genera un numero casuale da 1 a 5
+function randomNumber() {
+   return Math.floor(Math.random() * 6) + 1;
+}
+
+console.log(randomNumber());
