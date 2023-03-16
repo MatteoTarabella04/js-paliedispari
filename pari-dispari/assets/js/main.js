@@ -22,6 +22,8 @@ if (userChoise != 'pari' && userChoise != 'dispari') {
 
    if (isNaN(userNumber) || userNumber < 1 || userNumber > 5) {
       alert('Valore inserito non numerico o assicurati di inserire un numero che vada da 1 al 5 ')
+
+      // istruzione che ricarica la pagina se si inserisce una scelta sbagliata
       window.location.reload(true);
    }
 
@@ -31,8 +33,12 @@ if (userChoise != 'pari' && userChoise != 'dispari') {
 
    //inizializzo la somma
    const sum = userNumber + cpuNumber;
-
    console.log(sum);
+
+   winner(userChoise, userNumber, cpuNumber, sum);
+
+   window.location.reload(true);
+
 }
 
 
@@ -44,3 +50,12 @@ function randomNumber() {
 }
 
 // creo la funzione per selezionare il vincitore
+function winner (choise, userNum, cpuNum, sum){
+   if ((choise == 'pari' && sum % 2 == 0) || (choise == 'dispari' && sum % 2 != 0)) {
+
+      alert(`YOUR CHOISE: ${choise} YOUR NUMBER : ${userNum} CPU: ${cpuNum} SUM: ${sum} YOU WIN!!!`)
+      
+   } else {
+      alert(`YOUR CHOISE: ${choise} YOUR NUMBER : ${userNum} CPU: ${cpuNum} SUM: ${sum} YOU LOSE!!!`)
+   }
+}
