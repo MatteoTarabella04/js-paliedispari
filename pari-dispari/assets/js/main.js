@@ -20,12 +20,20 @@ if (userChoise != 'pari' && userChoise != 'dispari') {
    const userNumber = Number(prompt('Ora scegli un numero tra 1 e 5'));
    console.log(userNumber);
 
-   if (isNaN(userNumber)) {
-      alert('Valore inserito non numerico')
+   if (isNaN(userNumber) || userNumber < 1 || userNumber > 5) {
+      alert('Valore inserito non numerico o assicurati di inserire un numero che vada da 1 al 5 ')
       window.location.reload(true);
    }
-}
 
+   // creo una variabile dove verrà contenuto un numero casuale che appartiene alla cpu
+   const cpuNumber = randomNumber();
+   console.log(cpuNumber);
+
+   //inizializzo la somma
+   const sum = userNumber + cpuNumber;
+
+   console.log(sum);
+}
 
 
 // *****FUNZIONI*****
@@ -35,4 +43,4 @@ function randomNumber() {
    return Math.floor(Math.random() * 6) + 1;
 }
 
-console.log(randomNumber());
+// creo la funzione per selezionare il vincitore
