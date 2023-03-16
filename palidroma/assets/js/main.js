@@ -22,3 +22,9 @@ function reverse(userWord){
 }
 console.log(reverse(word));
 
+// verifico le condizioni 
+if (reverse(word) == true) {
+   console.log(`La parola ${word} è un palindromo`);
+} else {
+   console.log(`La parola ${word} non è un palindromo`);
+}
